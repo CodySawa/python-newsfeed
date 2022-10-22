@@ -1,3 +1,4 @@
+from base64 import encode
 import imp
 from operator import imod
 from app.db import Base
@@ -26,3 +27,9 @@ class User(Base):
         assert len(password) > 4
 
         return bcrypt.hashpw(password.encode('utf-8'), salt)
+
+    def verify_password(self, password):
+        return bcrypt.checkpw(
+            password.encode('utf-8'),
+            self.password.encode('utf-8')
+        )
