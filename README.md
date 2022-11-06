@@ -8,7 +8,7 @@ Deployed Application [here](https://tech-news-social.herokuapp.com/)
 ## Built With
 * HTML
 * CSS
-* JavaScrit
+* JavaScript
 * Python
 * MySQL
 * Flask
